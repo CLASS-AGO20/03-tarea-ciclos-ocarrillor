@@ -20,6 +20,22 @@ export default class App {
         }
         return suma;
     }
+
+    esPrimo(numero){
+        let cont = 1, acum = 0;
+            do{
+                if(numero % cont == 0){
+                    acum++;
+                }
+                cont++;
+            }while(cont <= numero);
+        
+        if(acum == 2){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
 
 let app = new App();
@@ -27,5 +43,9 @@ let app = new App();
 //Demostracion de la funcion sumatoriaSerieUno.
 console.log(app.sumatoriaSerieUno(20));
 
-//Demostracion de la funcion sumatoriaSerieUno.
+//Demostracion de la funcion sumatoriaSerieDos.
 console.log(app.sumatoriaSerieDos(5));
+
+//Demostracion de la funcion esPrimo.
+console.log(app.esPrimo(5));
+console.log(app.esPrimo(6));

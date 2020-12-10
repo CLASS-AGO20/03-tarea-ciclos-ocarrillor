@@ -36,6 +36,17 @@ export default class App {
             return false;
         }
     }
+
+    obtenerMultiplos(inicio, fin){
+        let cont = inicio, cadena = "";
+        do{
+            if(cont % 3 == 0){
+                cadena = cadena + cont;
+            }
+            cont++;
+        }while(cont <= fin);
+        return cadena;
+    }
 }
 
 let app = new App();
@@ -49,3 +60,6 @@ console.log(app.sumatoriaSerieDos(5));
 //Demostracion de la funcion esPrimo.
 console.log(app.esPrimo(5));
 console.log(app.esPrimo(6));
+
+//Demostracion de la funcion obtenerMultiplos.
+console.log(app.obtenerMultiplos(10,25));

@@ -47,6 +47,29 @@ export default class App {
         }while(cont <= fin);
         return cadena;
     }
+
+    obtenerImpares(numero1, numero2){
+        let mayor, menor, cont = 1, impares = "";
+        if(numero1 > numero2){
+            mayor = numero1;
+            menor = numero2;
+        }else{
+            mayor = numero2;
+            menor = numero1;
+        }
+
+        for(let i = mayor; i >= menor; i--){
+            if(i % 2 != 0){
+                if(cont == 1){
+                    impares = impares + i;
+                    cont++;
+                }else{
+                    impares = impares + "," + i;
+                }
+            }
+        }
+        return impares;
+    }
 }
 
 let app = new App();
@@ -63,3 +86,7 @@ console.log(app.esPrimo(6));
 
 //Demostracion de la funcion obtenerMultiplos.
 console.log(app.obtenerMultiplos(10,25));
+
+//Demostracion de la funcion obtenerImpares.
+console.log(app.obtenerImpares(5,10));
+console.log(app.obtenerImpares(10,5));

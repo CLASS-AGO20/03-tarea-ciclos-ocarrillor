@@ -1,9 +1,11 @@
 export default class App {
     sumatoriaSerieUno(numero){
-        let suma;
-        for(let i = 1; i <= numero; i++){
-            console.log(i + 1);
+        let suma = 1;
+
+        for(let i = 2; i <= numero; i++){
+            suma = suma + (1/i);
         }
+        return suma;
     }
 }
 
